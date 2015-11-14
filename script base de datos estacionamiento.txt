@@ -1,0 +1,74 @@
+create table usuario(
+	iduser serial,
+	nombre varchar(30),
+	apaterno varchar(30),
+	amaterno varchar(30),
+	domicilio varchar(60),
+	telefono int,
+	tipo_usuario varchar(30),
+	licencia varchar(30),
+	tcirculacion varchar(30),
+	foto varchar(30),
+	CONSTRAINT pk_uuser PRIMARY KEY(iduser)
+)
+
+create table vehiculo(
+	idvehiculo serial,
+	iduser int,
+	marca varchar(30),
+	modelo varchar(30),
+	transmision varchar(30),
+	placas varchar(30),
+	color varchar(30),
+	año int,
+	caracteristicas varchar(200),
+	observaciones varchar(600),
+	CONSTRAINT pk_vehiculo PRIMARY KEY(idvehiculo),
+	CONSTRAINT fk_user FOREIGN KEY(iduser) REFERENCES usuario(iduser)	
+)
+
+-- insertar usuario y vehiculos nuevos
+insert into usuario(nombre, apaterno, amaterno, domicilio, telefono, tipo_usuario, licencia, tcirculacion, foto) 
+values ('Alejandro', 'Alvarado', 'Soria', 'Alejandro de Humbolt # 105 A', 1234567890, 'Alumno', '123t5h7e98f', '3hd7wb292872y3', 'foro.jpg')
+insert into usuario(nombre, apaterno, amaterno, domicilio, telefono, tipo_usuario, licencia, tcirculacion, foto) 
+values ('Jose', 'Ramirez', 'Estrada', 'Los Alamos # 715', 948610467, 'Profesor', 'y7h3b7d26e9', '2y345gfd7865', 'foto2.jpg')
+select * from usuario;
+
+insert into vehiculo(iduser, marca, modelo, transmision, placas, color, año, caracteristicas, observaciones) 
+values(1, 'Honda', 'Civic', 'Estandar', 'RSX8464', 'Azul', 2015, 'Seguro, Aire, Estereo, Frenos de Disco', 'esta bien bonito')
+insert into vehiculo(iduser, marca, modelo, transmision, placas, color, año, caracteristicas, observaciones) 
+values(1, 'Ford', 'Curier', 'Estandar', 'ARZ4501', 'Blanco', 2004, 'Aire, Estereo', 'funciona al 100')
+insert into vehiculo(iduser, marca, modelo, transmision, placas, color, año, caracteristicas, observaciones) 
+values(2, 'volksWagen', 'passat', 'Estandar', 'TDH3487', 'Negro', 2016, 'Seguro, Aire Acondicionado, Estereo, Bolsas de Aire Frenos de Disco', 'sacadito de agencia')
+
+insert into vehiculo(iduser, marca, modelo, transmision, placas, color, año, caracteristicas, observaciones) 
+values(2, 'volksWagen', 'Jeta', 'Estandar', 'TDH3487', 'Negro', 2016, 'Seguro, Aire Acondicionado, Estereo, Bolsas de Aire Frenos de Disco', 'sacadito de agencia')
+
+--seleccionar todo de usuario
+select * from usuario;
+
+--seleccionar todo de vehiculo
+select * from vehiculo;
+select * from vehiculo where iduser = 1;
+select * from vehiculo where iduser = 2;
+
+--seleccionar el usuario para mostrarlo en la lista
+select nombre, apaterno, amaterno, foto, tipo_usuario from usuario;
+
+--informacion  para el targeton
+select nombre, apaterno, amaterno, tipo_usuario, licencia, foto from usuario where iduser=1;
+select modelo, color, placas from vehiculo where iduser=1;
+
+--mostrar lista del usuario y sus vehiculos
+select * from usuario where iduser=1;
+select * from vehiculo where iduser=1;
+
+--actualizacion de usuario y vehiculo
+update usuario set nombre='nuevo_nombre', apaterno='nuevo_apaterno', amaterno='nuevo_amaterno', domicilio='nuevo_domicilio', telefono=nuevo telefono, tipo_usuario='nuevo_tipo_usuario', licencia='nuava_licencia', tcirulacion='nueva targeta de circulacion', foto='nueva foto.jpg' where iduser=1;
+
+update vehiculo set marca='nueva marca', modelo='nuevo modelo', transmision='nueva transmision', placas='nueva placa', color='nuevo color', año=nuevo año, caracteristicas='nuavas caracteristicas', observacion='nueva observacion' where iduser=1; 
+
+--ejemplo de actualizr vehiculo
+update vehiculo set marca='Toyota', modelo='Corolla', transmision='Automatica', placas='HTL1785', color='Plata', año=2015, caracteristicas='Alarma, Estereo', observaciones='tiene los vidrios polarizados' where idvehiculo=4; 
+
+	
