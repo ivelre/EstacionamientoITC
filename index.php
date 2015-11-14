@@ -6,5 +6,5 @@
 	$html = new Smarty;
 	$html-> Assign("rutas",$rutas);
 	$html-> Assign("titulo",$titulo);
-	$html->display("home.html");
+	$html->display("home.tpl");
  ?>

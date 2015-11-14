@@ -1,0 +1,43 @@
+.margen {
+			margin: auto;
+			text-align: center;
+			width: 80%;
+		}
+
+.cuerpo {
+			margin: auto;
+			text-align: center;
+			width: 80%;
+		}
+.imgs {
+			margin: auto;
+			text-align: center;
+			width: 80%;
+		}
+.pie {
+			margin: auto;
+			text-align: center;
+			width: 80%;
+		}
+
+
+.breadcrumb li a{
+	text-decoration: none;
+}
+
+.footer {
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  /* Set the fixed height of the footer here */
+	  height: 60px;
+	  background-color: blue;
+	}
+.container {
+	  width: auto;
+	  max-width: 680px;
+	  padding: 0 15px;
+	}
+	.container .text-muted {
+	  margin: 20px 0;
+	}
