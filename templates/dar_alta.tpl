@@ -53,15 +53,9 @@
 				  			</div>
 				  		</div>
 				  		<div class="form-group">
-				  			<label class="col-sm-3 control-label">targeta de circulación:</label>
+				  			<label class="col-sm-3 control-label">tarjeta de circulación:</label>
 				  			<div class="col-sm-9">
 				  				<input type="text" class="form-control" name="tcirculacion" id="tcirculacion" placeholder="targeta de circulación" required>
-				  			</div>
-				  		</div>
-				  		<div class="form-group">
-				  			<label class="col-sm-3 control-label">Fotogragía:</label>
-				  			<div class="col-sm-9">
-				  				<input type="file" name="fotografia" id="Archivo">
 				  			</div>
 				  		</div>
 				  		<h1>Primer Vehículo</h1>
