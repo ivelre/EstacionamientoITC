@@ -72,3 +72,21 @@ update vehiculo set marca='nueva marca', modelo='nuevo modelo', transmision='nue
 update vehiculo set marca='Toyota', modelo='Corolla', transmision='Automatica', placas='HTL1785', color='Plata', año=2015, caracteristicas='Alarma, Estereo', observaciones='tiene los vidrios polarizados' where idvehiculo=4; 
 
 	
+
+
+
+
+
+	insert into usuario(nombre, apaterno, amaterno, domicilio, telefono, tipo_usuario, licencia, tcirculacion, foto) 
+values ('Jose', 'Ramirez', 'Estrada', 'Los Alamos # 715', 948610467, '2', 'y7h3b7d26e9', '2y345gfd7865', 'foto2.jpg')
+select * from usuario;
+
+insert into vehiculo(iduser, marca, modelo, transmision, placas, color, año, caracteristicas, observaciones) 
+values(1, 'Honda', 'Civic', 'Estandar', 'RSX8464', 'Azul', 2015, '1 2 4 5 6', 'esta bien bonito')
+insert into vehiculo(iduser, marca, modelo, transmision, placas, color, año, caracteristicas, observaciones) 
+values(1, 'Ford', 'Curier', 'Estandar', 'ARZ4501', 'Blanco', 2004, 'Aire, Estereo', 'funciona al 100')
+insert into vehiculo(iduser, marca, modelo, transmision, placas, color, año, caracteristicas, observaciones) 
+values(2, 'volksWagen', 'passat', 'Estandar', 'TDH3487', 'Negro', 2016, '2 4 6', 'sacadito de agencia')
+
+insert into vehiculo(iduser, marca, modelo, transmision, placas, color, año, caracteristicas, observaciones) 
+values(2, 'volksWagen', 'Jeta', 'Estandar', 'TDH3487', 'Negro', 2016, '1 2 3 4 5 6', 'sacadito de agencia')

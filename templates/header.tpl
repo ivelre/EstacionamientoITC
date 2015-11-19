@@ -5,6 +5,7 @@
 	<title>{$titulo}</title>
 	
 	<!-- Bootstrap -->
+	 <script src="js/jquery.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap/css/estilos.css" rel="stylesheet">
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -12,7 +13,6 @@
     <!--
     <script src="jquery-2.1.4.js"></script>
 -->
-	 <script src="http://code.jquery.com/jquery.js"></script>
 
 
 
@@ -43,9 +43,9 @@
 			       otro elemento que se pueda ocultar al minimizar la barra -->
 			  <div class="collapse navbar-collapse navbar-ex1-collapse">
 			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="#">Inicio</a></li>
-			      <li><a href="#">Registro</a></li>	 
-			      <li><a href="#">Ver Listados</a></li>	      
+			      <li><a href="index.php">Inicio</a></li>
+			      <li><a href="Dar_alta.php">Registro</a></li>	 
+			      <li><a href="propietarios.php">Ver Listados</a></li>	      
 			    </ul>
 			 
 			    <form class="navbar-form navbar-right" role="search">
